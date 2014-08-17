@@ -6,7 +6,7 @@ MCU_TARGET     = attiny2313
 AVRDUDE_TARGET = t2313
 OPTIMIZE       = -Os
 DEFS           =
-LIBS           =
+LIBS           = main.c i2cmaster.S
 
 HZ          = 8000000
 
