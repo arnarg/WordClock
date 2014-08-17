@@ -3,6 +3,7 @@
 
 // SCL on PD5, SDA on PD4
 
+// Defines for 74HC595 pins
 #define DATA	PB2
 #define CLOCK	PB1
 #define LATCH	PB0
