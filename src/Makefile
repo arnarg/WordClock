@@ -6,7 +6,7 @@ MCU_TARGET     = attiny2313
 AVRDUDE_TARGET = t2313
 OPTIMIZE       = -Os
 DEFS           =
-LIBS           = main.c i2cmaster.S
+LIBS           = i2cmaster.S
 
 HZ          = 8000000
 
@@ -79,7 +79,7 @@ install:  $(PRG).hex
 
 fuse:
 	avrdude -p $(AVRDUDE_TARGET) -c $(PROGRAMMER) -P $(PORT) -v \
-	-U lfuse:w:0xe2:m -U hfuse:w:0xdf:m -U efuse:w:0xff:m 	
+	-U lfuse:w:0xe4:m -U hfuse:w:0xdf:m -U efuse:w:0xff:m 	
 
 ddd: gdbinit
 	ddd --debugger "avr-gdb -x $(GDBINITFILE)"

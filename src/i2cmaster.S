@@ -68,11 +68,10 @@
 ;For I2C in normal mode (100kHz), use T/2 > 5us
 ; For I2C in fast mode (400kHz),   use T/2 > 1.3us
 ;*************************************************************************
-.stabs “”,100,0,0,i2c_delay_T2 
+.stabs “”,100,0,0,i2c_delay_T2
 .stabs “i2cmaster.S”,100,0,0,i2c_delay_T2
-.func i2c_delay_T2 ; delay 5.0 microsec with 8 Mhz crystal
-
-i2c_delay_T2:    ; 4 cycles
+.func i2c_delay_T2 ; delay 5.0 microsec with 4 Mhz crystal
+i2c_delay_T2:        ; 4 cycles 
 ; a nop delays 1 count.
 ; you have to align this up to the clock speed of the processor.
 ; To get 5.0 microseconds with a 8 Mhz crystal, you have to
